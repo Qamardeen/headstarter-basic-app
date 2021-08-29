@@ -8,9 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 const Charity = () => {
   const [selectedCharity, setSelectedCharity] = useState();
 
-  useEffect(() => {
-    // get charities
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <View style={styles.section}>
