@@ -5,33 +5,6 @@ import { StyleSheet, Text, TextInput, View, FlatList } from "react-native";
 import { ToastContainer, toast } from "react-toastify";
 // import charity information
 
-const listings = [
-  {
-    id: 1,
-    title: "Meditation",
-    description: "Meditation",
-    uri: "www.google.com",
-  },
-  {
-    id: 2,
-    title: "Yoga",
-    description: "Yoga",
-    uri: "www.google.com",
-  },
-  {
-    id: 3,
-    title: "Yoga",
-    description: "Yoga",
-    uri: "www.google.com",
-  },
-  {
-    id: 4,
-    title: "Guided Miditation",
-    description: "Guided Miditation",
-    uri: "www.google.com",
-  },
-];
-
 const Charity = () => {
   const [selectedCharity, setSelectedCharity] = useState();
 
@@ -41,17 +14,21 @@ const Charity = () => {
 
   return (
     <View style={styles.section}>
-      <Text style={styles.titleText}>Donate to Charity ?</Text>
+      <Text style={styles.titleText}>Donate to Charity ? $4</Text>
 
       <Picker
         style={styles.textInputView}
         selectedValue={selectedCharity}
         onValueChange={(itemValue, itemIndex) => setSelectedCharity(itemValue)}
       >
-        {listings &&
-          listings.map((item, index) => {
-            return <Picker.Item label={item} value={index} key={index} />;
-          })}
+        <Picker.Item
+          label="Elizabeth Glaser Pediatric AIDS Foundation"
+          value="Elizabeth Glaser Pediatric AIDS Foundation"
+        />
+        <Picker.Item
+          label="Children's Defense Fund"
+          value="Children's Defense Fund"
+        />
       </Picker>
     </View>
   );
